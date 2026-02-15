@@ -9,7 +9,7 @@ export default function Hero(){
         <p className="hero-sub">Frontend Developer — building accessible, performant and user-friendly web apps with React.</p>
         <div className="hero-cta">
           <a href="#projects" className="btn btn-cta me-3">See my work</a>
-          <a href="/Astha_Jethava.pdf" className="btn btn-ghost" download>Download CV</a>
+          <a href="/Astha-Jethava.pdf" className="btn btn-ghost" download>Download CV</a>
         </div>
       </motion.div>
     </section>

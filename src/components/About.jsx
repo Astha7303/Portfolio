@@ -11,7 +11,7 @@ export default function About(){
         <div className="row">
           <div className="col-lg-10">
             <p className="lead text-grey">{aboutText}</p>
-            <p><strong>Education:</strong> B.Tech in Computer Engineering — Silver Oak University (2024)</p>
+            <p><strong>Education:</strong> B.Tech in Computer Engineering (2024)</p>
             <p className="mt-2"><strong>Current:</strong> ReactJs Developer at Proplegit Global Pvt Ltd (June 2025 - Present)</p>
           </div>
         </div>
