@@ -1,4 +1,5 @@
 import React, {useRef, useState} from 'react'
+import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
 export default function Contact(){
@@ -22,7 +23,14 @@ export default function Contact(){
   }
 
   return (
-    <section id="contact" className="section">
+    <motion.section
+      id="contact"
+      className="section"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+    >
       <div className="container">
         <h2 className="section-title">Contact</h2>
         <div className="row">
@@ -45,6 +53,6 @@ export default function Contact(){
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
