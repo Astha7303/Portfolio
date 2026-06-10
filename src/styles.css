@@ -48,6 +48,50 @@ body {
   transition: width 0.15s linear;
 }
 
+/* 3D scroll-journey background */
+.scene3d-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+/* content sits above the 3D world */
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* glass UI panels — the 3D journey shows through & around them */
+.main-content .section .container,
+.hero-section .hero-inner {
+  background: rgba(10, 13, 20, 0.55);
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 34px 36px;
+  box-shadow: 0 24px 70px rgba(2, 6, 18, 0.45);
+}
+body[data-theme="light"] .main-content .section .container,
+body[data-theme="light"] .hero-section .hero-inner {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 24px 70px rgba(30, 41, 59, 0.18);
+}
+
+/* give the journey room to breathe + reveal the scene between panels */
+.section {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+}
+.section .container {
+  width: 100%;
+}
+
+
 /* background blobs & particles */
 .background-blobs {
   pointer-events: none;
